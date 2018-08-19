@@ -39,7 +39,19 @@
        {{> recipeDetailsPartial}}
        <a onClick="displayEditForm();">Edit Recipe</a>
      </div>
-   </script> 
+   </script>
+
+   <script id="recipe-details-partial" type="text/x-handlebars-template">
+     <div id="recipe">
+       <p>{{description}}</p>
+       Ingredients: <br>
+       <ul>
+         {{#each ingredients}}
+           {{displayIngredient this}}
+         {{/each}}
+       </ul>
+     </div>
+   </script>
 
   </body>
 </html>
