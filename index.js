@@ -10,3 +10,18 @@ function init() {
       }
     })
 }
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  init()
+})
+
+function createRecipe() {
+  let name = document.getElementById("name").value
+  let description = document.getElementById("description").value
+  let ingredients = []
+  let ingredientsValue = document.getElementsByName("ingedients")
+
+  for(let i = 0; i < ingredientsValue.length; i++) {
+    ingredients.push(ingredientsValues[i].value)
+  }
+}
